@@ -5,7 +5,8 @@ import 'package:untitled/utils/app_styles.dart';
 import '../utils/app_layout.dart';
 
 class HotelScreen extends StatelessWidget {
-  const HotelScreen({Key? key}) : super(key: key);
+  final Map<String, dynamic> hotel;
+  const HotelScreen({Key? key, required this.hotel}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,33 +22,33 @@ class HotelScreen extends StatelessWidget {
           spreadRadius: 10,
         )
       ], color: Styles.primaryColor, borderRadius: BorderRadius.circular(12)),
-      height: 350,
+      height: AppLayout.getHeight(350),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 180,
+            height: AppLayout.getHeight(180),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: Styles.primaryColor,
-              image: const DecorationImage(
+              image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage("assets/images/one.png"),
+                image: AssetImage("assets/images/${hotel['image']}"),
               ),
             ),
           ),
           const Gap(15),
           Text(
-            "Open Space",
+            "${hotel['place']}",
             style: Styles.headLineStyle2.copyWith(color: Colors.white),
           ),
           Text(
-            "London",
+            "${hotel['destination']}",
             style: Styles.headLineStyle4.copyWith(color: Colors.white),
           ),
           const Gap(10),
           Text(
-            "\$ 40 / Night",
+            "\$ ${hotel['price']} / Night",
             style: Styles.headLineStyle.copyWith(color: Colors.white60),
           ),
         ],
