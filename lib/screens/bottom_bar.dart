@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/screens/home_screen.dart';
+import 'package:untitled/utils/app_styles.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -35,7 +36,7 @@ class _BottomBarState extends State<BottomBar> {
         elevation: 10,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Colors.blueGrey,
+        selectedItemColor: Styles.primaryColor,
         unselectedItemColor: const Color(0xFF526480),
         type: BottomNavigationBarType.fixed,
         items: const [

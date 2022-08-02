@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-Color primary = const Color(0xff78829a);
+Color primary = const Color(0xff4d66a8);
 
 class Styles {
   static Color primaryColor = primary;
   static Color textColor = const Color(0xFF3b3b3b);
   static Color bgColor = const Color(0xFFeeedf2);
-  static Color orangeColor = const Color(0xFF526799);
+  static Color orangeColor = const Color(0xFFF37B67);
   static TextStyle textStyle =
       TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);
   static TextStyle headLineStyle =
