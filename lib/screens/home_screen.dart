@@ -2,7 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:untitled/screens/hotel_screen.dart';
-import 'package:untitled/screens/ticket_screen.dart';
+import 'package:untitled/screens/ticket_view.dart';
 import 'package:untitled/utils/app_info_list.dart';
 import 'package:untitled/widgets/double_text_widget.dart';
 
@@ -44,9 +44,11 @@ class HomeScreen extends StatelessWidget {
                       width: 50,
                       height: 50,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: const DecorationImage(
-                              image: AssetImage("assets/images/img_1.png"))),
+                        borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                          image: AssetImage("assets/images/img_1.png"),
+                        ),
+                      ),
                     )
                   ],
                 ),
@@ -80,7 +82,10 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20),
             child: Row(
                 children: ticketList
-                    .map((ticket) => TicketView(ticket: ticket))
+                    .map((ticket) => TicketView(
+                          ticket: ticket,
+                          isColor: true,
+                        ))
                     .toList()),
           ),
           const Gap(15),
